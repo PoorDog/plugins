@@ -41,7 +41,15 @@ addon_types = ('py', 'pl', 'lua', 'js') # tcl has no way to unload a single scri
 addon_cache = {}
 #               User,       Repo,      Folder
 addon_sites = (('TingPing', 'plugins', 'HexChat'),
-				('Farow', 'hexchat-scripts', ''))
+               ('Farow', 'hexchat-scripts', ''),
+               ('ChaozZBubi', 'tools', 'hexchat'),
+               ('demialucard', 'xchat-scripts', ''),
+               ('GermainZ', 'HexChat-Scripts', ''),
+               ('logicplace', 'xchat-plugins', ''),
+               ('PoorDog', 'hexchat-scripts', 'Arnavion-scripts'),
+               ('ScottSteiner', 'xchat-scripts', ''),
+               ('tobiassjosten', 'xchat-common-denominator', ''),
+               ('Wardje', 'xchat-scripts', ''))
 
 
 def expand_script(script):
