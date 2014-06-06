@@ -16,7 +16,7 @@ events = ('Channel Message',
 # TODO: update these for hexchats default theme
 modes = {'+':'24',
 		'%':'28',
-		'@':'19',
+		'@':'23',
 		'&':'21',
 		'~':'22'}
 
@@ -28,7 +28,7 @@ def msg_cb(word, word_eol, event, attrs):
 		return hexchat.EAT_NONE
 
 	color = modes[word[2]]
-	nick = '\003{}{}\00399'.format(color, hexchat.strip(word[0]))
+	nick = '\003{}{}\017'.format(color, hexchat.strip(word[0]))
 	word = [(word[i] if len(word) > i else '') for i in range(4)]
 
 	edited = True
