@@ -14,11 +14,11 @@ events = ('Channel Message',
           'Your Action')
 
 # TODO: update these for hexchats default theme
-modes = {'+': '30',
-         '%': '30',
-         '@': '30',
-         '&': '30',
-         '~': '30'}
+modes = {'+': '22',
+         '%': '18',
+         '@': '19',
+         '!': '24',
+         '~': '23'}
 
 edited = False
 
