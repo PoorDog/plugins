@@ -25,7 +25,11 @@ local function find_highlighttab ()
 	return ctx
 end
 
-local function on_highlight (args, event_type)
+local function on_highlight (args, event_type, attrs)
+	if attrs.server_time_utc > 0 then -- Ignore znc playback
+		return
+	end
+
 	local channel = hexchat.get_info('channel')
 	local highlight_context = find_highlighttab()
 
@@ -42,7 +46,7 @@ local function on_highlight (args, event_type)
 end
 
 for _, event in ipairs({'Channel Msg Hilight', 'Channel Action Hilight'}) do
-	hexchat.hook_print(event, function (args)
-		return on_highlight(args, event)
+	hexchat.hook_print_attrs(event, function (args, attrs)
+		return on_highlight(args, event, attrs)
 	end, hexchat.PRI_LOW)
 end
